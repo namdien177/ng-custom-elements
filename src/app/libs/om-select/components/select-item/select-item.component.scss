@@ -1,0 +1,43 @@
+:host {
+  display: block;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  overflow: hidden;
+  user-select: none;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+
+  &:first-child {
+    border-radius: 0.25rem 0.25rem 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 0.25rem 0.25rem;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  &.selected {
+    color: forestgreen;
+  }
+
+  &:hover,
+  &.focused,
+  &.active {
+    outline: none;
+    background-color: #ddd;
+
+    @media screen and (-ms-high-contrast: active) {
+      background-color: #ddd;
+    }
+  }
+
+  &.disabled {
+    background-color: #aaa;
+    opacity: 0.5;
+    cursor: auto;
+  }
+}
